@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAI3: Fairness AI Network</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      padding: 20px 0;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3.5em;
+      margin-bottom: 10px;
+      color: #a9b7fe; /* Changed color */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    nav {
+      background-color: #222;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+    nav ul li a:hover {
+      color: #a9b7fe; /* Changed color */
+    }
+    .features {
+      display: flex;
+      justify-content: space-between; /* Added space between features */
+      margin-top: 50px;
+      margin-bottom: 50px; /* Added space between sections */
+    }
+    .feature {
+      flex-basis: calc(49% - 20px); /* Adjusted width */
+      margin-bottom: 40px;
+      text-align: center;
+      padding: 30px;
+      border-radius: 10px;
+      background-color: #333;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+    .feature:hover {
+      transform: translateY(-5px);
+    }
+    .feature h3 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #a9b7fe; /* Changed color */
+    }
+    .feature p {
+      font-size: 1.1em;
+    }
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #222;
+    }
+    footer p {
+      font-size: 0.9em;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    .graphical-bullets {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    .bullet-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .bullet {
+      width: 150px;
+      height: 150px;
+      background-color: #000; /* Changed to black */
+      border: 5px solid #a9b7fe; /* Colored border */
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2em;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      position: relative;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+    .bullet:hover {
+      transform: scale(1.1);
+    }
+    .bullet-description {
+      width: 80%; /* Adjusted width */
+      text-align: center;
+      font-size: 0.9em;
+      color: #fff;
+      position: relative;
+      bottom: -30px;
+    }
+    .bullet-description b {
+      font-weight: bold; /* Added bold font */
+    }
+    .token-economics {
+      margin-top: 50px; /* Added space above "We Propose" */
+    }
+    .token-economics h3 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #a9b7fe; /* Changed color */
+      text-align: center;
+    }
+    .token-economics table {
+      width: 100%;
+      margin: 0 auto; /* Center the table */
+      border-collapse: collapse; /* Collapse borders */
+    }
+    .token-economics th, .token-economics td {
+      padding: 10px;
+      text-align: center;
+    }
+    .token-economics th {
+      background-color: #222;
+      color: #a9b7fe;
+    }
+    .token-economics td {
+      background-color: #444;
+      color: #fff;
+      transition: background-color 0.3s ease; /* Added transition */
+    }
+    .token-economics td:hover {
+      background-color: #666; /* Changed background color on hover */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FAI3: Fairness AI Network</h1>
+    <p>Building a fairer AI ecosystem through decentralized computation and transparency</p>
+  </header>
+
+  <nav>
+    <ul>
+   <!--    <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Features</a></li>
+      <li><a href="#">Contact</a></li>-->
+    </ul>
+  </nav>
+
+  <div class="container">
+
+    <p style="text-align: left;"> <!-- Aligned left -->
+      Artificial intelligence requires significant resources:
+    </p>
+    <p style="text-align: left;"> <!-- Aligned left -->
+      <b>Data:</b> Large datasets are essential for training and fine-tuning AI models.
+      <br>
+      <b>Computation:</b> Powerful computing resources are needed to process complex algorithms and massive data sets.
+      <br>
+      <b>Human Annotation:</b> Expert human input is crucial for labeling data, guiding the learning process, and ensuring the accuracy of AI systems.
+    </p>
+
+    <h2 style="text-align: center; color: #a9b7fe; margin-top: 50px;">A Threat to Humanity</h2>
+
+    <div class="graphical-bullets">
+      <div class="bullet-container">
+        <div class="bullet">
+          Bias
+        </div>
+        <div class="bullet-description">
+          We use AI algorithms and may not be aware of bias evaluation.
+        </div>
+      </div>
+      <div class="bullet-container">
+        <div class="bullet">
+          Centralization
+        </div>
+        <div class="bullet-description">
+          Only few can access computation at that scale.
+        </div>
+      </div>
+      <div class="bullet-container">
+        <div class="bullet">
+          Version Control
+        </div>
+        <div class="bullet-description">
+          We aren’t aware of changes in versions of code, data, or annotations.
+        </div>
+      </div>
+    </div>
+
+    <h2 style="text-align: center; color: #a9b7fe; margin-top: 50px;">We Propose</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>Record Predictions</h3>
+          <p>Fairness in AI is critical. We record predictions on the network to evaluate fairness constantly. This allows users to have transparent model evaluation metrics.</p>
+        </div>
+       
+        <div class="feature">
+          <h3>On-Chain <br> Fine-tuning</h3>
+          <p>The network facilitates the fine-tuning of models on-chain. New versions of the model and data are available and constantly evaluated for fairness.</p>
+        </div>
+        <div class="feature">
+          <h3>Version Control<br></h3>
+          <br>
+          <p>Creates a traceable history of how models evolve over time and how different datasets influence their development.</p>
+        </div>
+      </div>
+  
+
+    <div class="token-economics">
+      <h3>Token Economics</h3>
+      <table>
+        <tr>
+          <th>Earn</th>
+          <th>Pay</th>
+        </tr>
+        <tr>
+          <td>Usage of your models</td>
+          <td>Deploying a model</td>
+        </tr>
+        <tr>
+          <td>Usage of your data</td>
+          <td>Fine-tuning</td>
+        </tr>
+        <tr>
+          <td>Helping validate fairness in AI models</td>
+          <td>Making predictions on the network</td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2024 FAI3. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -29,9 +29,12 @@
       margin-bottom: 30px;
     }
     .container {
-      max-width: 900px;
+      max-width: 90%;
       margin: 0 auto;
       padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap; /* Allow items to wrap to the next line */
+      justify-content: center; 
     }
     nav {
       background-color: #222;
@@ -85,6 +88,7 @@
     footer {
       text-align: center;
       padding: 20px 0;
+      width: 100%;
       background-color: #222;
     }
     footer p {
@@ -94,7 +98,7 @@
     .graphical-bullets {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 30px;
+      margin-bottom: .3em;
     }
     .bullet-container {
       display: flex;
@@ -139,10 +143,11 @@
       color: #a9b7fe; /* Changed color */
       text-align: center;
     }
-    .token-economics table {
+   /* Table Styles */
+   .token-economics table {
       width: 100%;
-      margin: 0 auto; /* Center the table */
-      border-collapse: collapse; /* Collapse borders */
+      margin-bottom: 20px;
+      border-collapse: collapse;
     }
     .token-economics th, .token-economics td {
       padding: 10px;
@@ -155,10 +160,13 @@
     .token-economics td {
       background-color: #444;
       color: #fff;
-      transition: background-color 0.3s ease; /* Added transition */
+      transition: background-color 0.3s ease;
     }
-    .token-economics td:hover {
-      background-color: #666; /* Changed background color on hover */
+    @media only screen and (max-width: 600px) {
+      .token-economics th, .token-economics td {
+        font-size: 0.8em;
+        padding: 8px;
+      }
     }
 
 .wrapper {
@@ -186,14 +194,19 @@
     transform: translate3d(-50%, 0, 0);
   }
 }
-   @media only screen and (max-width: 768px) {
-      .feature {
-        flex-basis: calc(50% - 20px);
+@media only screen and (max-width: 375px) {
+      h1 {
+        font-size: 2em;
       }
-    }
-    @media only screen and (max-width: 480px) {
       .feature {
-        flex-basis: calc(100% - 20px);
+        margin-bottom: 20px;
+        padding: 15px;
+      }
+      .feature h3 {
+        font-size: 1.3em;
+      }
+      .feature p {
+        font-size: 0.9em;
       }
     }
   </style>
@@ -268,10 +281,11 @@
         </div>
       </div>
     </div>
-
+  </div>
     
 <br>
 <br>
+<div class="container">
     <h2 style="text-align: center; color: #a9b7fe; margin-top: 50px;">We Propose</h2>
       <div class="features">
         <div class="feature">
@@ -290,8 +304,9 @@
         </div>
       </div>
   
-
-    <div class="token-economics">
+  </div>
+  <div class="container"> 
+  <div class="token-economics">
       <h3>Token Economics</h3>
       <table>
         <tr>

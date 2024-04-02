@@ -33,9 +33,9 @@
       margin: 0 auto;
       padding: 0 20px;
       display: flex;
-      flex-wrap: wrap; /* Allow items to wrap to the next line */
-      justify-content: center; 
-    }
+  flex-wrap: wrap;
+  justify-content: space-around; /* Center items horizontally */
+}
     nav {
       background-color: #222;
       padding: 10px 0;
@@ -64,16 +64,18 @@
       margin-top: 50px;
       margin-bottom: 50px; /* Added space between sections */
     }
-    .feature {
-      flex-basis: calc(49% - 20px); /* Adjusted width */
-      margin-bottom: 40px;
-      text-align: center;
-      padding: 30px;
-      border-radius: 10px;
-      background-color: #333;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s ease;
-    }
+      .feature {
+    flex-basis: calc(33.33% - 40px);
+    margin-bottom: 20px; /* Adjusted margin */
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+
+
     .feature:hover {
       transform: translateY(-5px);
     }
@@ -167,6 +169,9 @@
         font-size: 0.8em;
         padding: 8px;
       }
+      .feature {
+       flex-basis: calc(50% - 40px); /* Adjusted width for two boxes per row */
+      }
     }
 
 .wrapper {
@@ -209,6 +214,11 @@
         font-size: 0.9em;
       }
     }
+    @media only screen and (max-width: 600px) {
+  .feature {
+    flex-basis: calc(50% - 20px); /* Adjusted width for two boxes per row */
+  }
+}
   </style>
 </head>
 <body>
@@ -234,14 +244,13 @@
       
     </ul>
   </nav> -->
-
-
   <div class="container">
-    <br>
-    <br>
-    <p style="text-align: left;"> <!-- Aligned left -->
-      Artificial intelligence requires vast resources:
-    </p>
+  <p style="text-align: left;"> <!-- Aligned left -->
+    Artificial intelligence requires vast resources:
+  </p>
+  </div>
+  <div class="container">
+ 
     <p style="text-align: left;"> <!-- Aligned left -->
       <b>Data:</b> Large datasets are essential for training and fine-tuning AI models.
       <br>
@@ -249,10 +258,11 @@
       <br>
       <b>Human Annotation:</b> Expert human input guides the learning process, and ensures the accuracy.
     </p>
-    
-    <br>
-    <br>
+    </div>
 
+    <br>
+    <br>
+    <div class="container">
     <h2 style="text-align: center; color: #a9b7fe; margin-top: 50px;">A Threat to Humanity</h2>
 
     <div class="graphical-bullets">

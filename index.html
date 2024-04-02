@@ -160,28 +160,62 @@
     .token-economics td:hover {
       background-color: #666; /* Changed background color on hover */
     }
+
+.wrapper {
+  
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.marquee {
+  
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: marquee 10s linear infinite;
+}
+
+.marquee p {
+  background-color: #666;
+  display: inline-block;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
   </style>
 </head>
 <body>
+
   <header>
     <h1>FAI3</h1>
-    <h2>(Fairness AI Network)</h2>
+    <h2>Fair AI, descentralization and transparency</h2>
     
   </header>
-
+ 
+  <div class="wrapper">
+    <div class="marquee">
+      <p>Fair AI Network | Building Fair AI Models | Ensuring Transparency | Fair AI Network | Building Fair AI Models | Ensuring Transparency |  Fair AI Network | Building Fair AI Models | Ensuring Transparency |</p>
+      <p>Fair AI Network | Building Fair AI Models | Ensuring Transparency | Fair AI Network | Building Fair AI Models | Ensuring Transparency |  Fair AI Network | Building Fair AI Models | Ensuring Transparency |</p>
+    </div>
+  </div>
+   <!--
   <nav>
     <ul>
-   <!--    <li><a href="#">Home</a></li>
+       <li><a href="#">Home</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Features</a></li>
-      <li><a href="#">Contact</a></li>-->
+      <li><a href="#">Contact</a></li>
+      
     </ul>
-  </nav>
-  <nav>
-    <ul>
-      <h2 style="text-align: center;">We are building a fairer AI ecosystem through decentralized computation and transparency </h2>
-    </ul>
-  </nav>
+  </nav> -->
+
+
   <div class="container">
     <br>
     <br>

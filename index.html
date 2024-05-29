@@ -1,347 +1,309 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAI3 </title>
-  <title>Fairness AI Network</title>
-  <style>
-    body {
-      background-color: #111;
-      color: #fff;
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-    header {
-      padding: 20px 0;
-      text-align: center;
-    }
-    h1 {
-      font-size: 3.5em;
-      margin-bottom: 10px;
-      color: #a9b7fe; /* Changed color */
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-    p {
-      font-size: 1.2em;
-      margin-bottom: 30px;
-    }
-    .container {
-      max-width: 90%;
-      margin: 0 auto;
-      padding: 0 20px;
-      display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; /* Center items horizontally */
-}
-    nav {
-      background-color: #222;
-      padding: 10px 0;
-      text-align: center;
-    }
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-    nav ul li {
-      display: inline;
-      margin: 0 10px;
-    }
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 1.2em;
-    }
-    nav ul li a:hover {
-      color: #a9b7fe; /* Changed color */
-    }
-    .features {
-      display: flex;
-      justify-content: space-between; /* Added space between features */
-      margin-top: 50px;
-      margin-bottom: 50px; /* Added space between sections */
-    }
-      .feature {
-    flex-basis: calc(33.33% - 40px);
-    margin-bottom: 20px; /* Adjusted margin */
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #333;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-  }
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>FAI3 &mdash; FAIR AI for a better future</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="freehtml5.co" />
 
+	<!-- 
+	//////////////////////////////////////////////////////
 
-    .feature:hover {
-      transform: translateY(-5px);
-    }
-    .feature h3 {
-      font-size: 1.8em;
-      margin-bottom: 20px;
-      color: #a9b7fe; /* Changed color */
-    }
-    .feature p {
-      font-size: 1.1em;
-    }
-    footer {
-      text-align: center;
-      padding: 20px 0;
-      width: 100%;
-      background-color: #222;
-    }
-    footer p {
-      font-size: 0.9em;
-      color: rgba(255, 255, 255, 0.7);
-    }
-    .graphical-bullets {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: .3em;
-    }
-    .bullet-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .bullet {
-      width: 150px;
-      height: 150px;
-      background-color: #000; /* Changed to black */
-      border: 5px solid #a9b7fe; /* Colored border */
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.2em;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      position: relative;
-      margin-bottom: 20px;
-      transition: transform 0.3s ease;
-    }
-    .bullet:hover {
-      transform: scale(1.1);
-    }
-    .bullet-description {
-      width: 80%; /* Adjusted width */
-      text-align: center;
-      font-size: 0.9em;
-      color: #fff;
-      position: relative;
-      bottom: -30px;
-    }
-    .bullet-description b {
-      font-weight: bold; /* Added bold font */
-    }
-    .token-economics {
-      margin-top: 50px; /* Added space above "We Propose" */
-    }
-    .token-economics h3 {
-      font-size: 1.8em;
-      margin-bottom: 20px;
-      color: #a9b7fe; /* Changed color */
-      text-align: center;
-    }
-   /* Table Styles */
-   .token-economics table {
-      width: 100%;
-      margin-bottom: 20px;
-      border-collapse: collapse;
-    }
-    .token-economics th, .token-economics td {
-      padding: 10px;
-      text-align: center;
-    }
-    .token-economics th {
-      background-color: #222;
-      color: #a9b7fe;
-    }
-    .token-economics td {
-      background-color: #444;
-      color: #fff;
-      transition: background-color 0.3s ease;
-    }
-    @media only screen and (max-width: 600px) {
-      .token-economics th, .token-economics td {
-        font-size: 0.8em;
-        padding: 8px;
-      }
-      .feature {
-       flex-basis: calc(50% - 40px); /* Adjusted width for two boxes per row */
-      }
-    }
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FreeHTML5.co
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
 
-.wrapper {
-  max-width: 100%;
-  overflow: hidden;
-}
+	//////////////////////////////////////////////////////
+	 -->
 
-.marquee {
-  white-space: nowrap;
-  overflow: hidden;
-  display: inline-block;
-  animation: marquee 20s linear infinite;
-}
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
 
-.marquee p {
-  background-color: #a9b7fe;
-  display: inline-block;
-}
+	<!-- <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">	 -->
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
 
-@keyframes marquee {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-50%, 0, 0);
-  }
-}
-@media only screen and (max-width: 375px) {
-      h1 {
-        font-size: 2em;
-      }
-      .feature {
-        margin-bottom: 20px;
-        padding: 15px;
-      }
-      .feature h3 {
-        font-size: 1.3em;
-      }
-      .feature p {
-        font-size: 0.9em;
-      }
-    }
-    @media only screen and (max-width: 600px) {
-  .feature {
-    flex-basis: calc(50% - 20px); /* Adjusted width for two boxes per row */
-  }
-}
-  </style>
-</head>
-<body>
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
 
-  <header>
-    <h1>FAI3</h1>
-    <h2>Fair AI, descentralization and transparency</h2>
-  </header>
- 
-  <div class="wrapper" >
-    <div class="marquee" >
-      <p >Fair AI Network | Descentralization | Transparency | Fair AI Network | Descentralization | Transparency | Fair AI Network | Descentralization | Transparency | Fair AI Network | Descentralization | Transparency |</p>
-      <p >Fair AI Network | Descentralization | Transparency | Fair AI Network | Descentralization | Transparency | Fair AI Network | Descentralization | Transparency | Fair AI Network | Descentralization | Transparency |</p>
-    </div>
-  </div>
-   <!--
-  <nav>
-    <ul>
-       <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Features</a></li>
-      <li><a href="#">Contact</a></li>
-      
-    </ul>
-  </nav> -->
-  <div class="container">
-  <p style="text-align: left;"> <!-- Aligned left -->
-    Artificial intelligence requires vast resources:
-  </p>
-  </div>
-  <div class="container">
- 
-    <p style="text-align: left;"> <!-- Aligned left -->
-      <b>Data:</b> Large datasets are essential for training and fine-tuning AI models.
-      <br>
-      <b>Computation:</b> Large computing resources are needed to process complex algorithms and data.
-      <br>
-      <b>Human Annotation:</b> Expert human input guides the learning process, and ensures the accuracy.
-    </p>
-    </div>
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
 
-    <br>
-    <br>
-    <div class="container">
-    <h2 style="text-align: center; color: #a9b7fe; margin-top: 50px;">A Threat to Humanity</h2>
+	</head>
+	<body>
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-2">
+						<div id="fh5co-logo"><a href="index.html">FAI<span>3</span></a></div>
+					</div>
+					<div class="col-xs-10 text-right menu-1">
+						<ul>
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="whitepaper.html">White Paper</a></li>
+							<li><a href="about.html">About Us</a></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</nav>
 
-    <div class="graphical-bullets">
-      <div class="bullet-container">
-        <div class="bullet">
-          Bias
-        </div>
-        <div class="bullet-description">
-          We use AI algorithms and may not be aware of bias evaluation.
-        </div>
-      </div>
-      <div class="bullet-container">
-        <div class="bullet">
-          Centralization
-        </div>
-        <div class="bullet-description">
-          Only few can access computation at that scale.
-        </div>
-      </div>
-      <div class="bullet-container">
-        <div class="bullet">
-          Version Control
-        </div>
-        <div class="bullet-description">
-          We aren’t aware of changes in versions of code, data, or annotations.
-        </div>
-      </div>
-    </div>
-  </div>
-    
-<br>
-<br>
-<div class="container">
-    <h2 style="text-align: center; color: #a9b7fe; margin-top: 50px;">We Propose</h2>
-      <div class="features">
-        <div class="feature">
-          <h3>Record Predictions</h3>
-          <p>Fairness in AI is critical. We record predictions on the network to evaluate fairness constantly. This allows users to have transparent model evaluation metrics.</p>
-        </div>
-       
-        <div class="feature">
-          <h3>On-Chain <br> Fine-tuning</h3>
-          <p>The network facilitates the fine-tuning of models on-chain. New versions of the model and data are available and constantly evaluated for fairness.</p>
-        </div>
-        <div class="feature">
-          <h3>Version Control<br></h3>
-          <br>
-          <p>Creates a traceable history of how models evolve over time and how different datasets influence their development.</p>
-        </div>
-      </div>
-  
-  </div>
-  <div class="container"> 
-  <div class="token-economics">
-      <h3>Token Economics</h3>
-      <table>
-        <tr>
-          <th>Earn</th>
-          <th>Pay</th>
-        </tr>
-        <tr>
-          <td>Usage of your models</td>
-          <td>Deploying a model</td>
-        </tr>
-        <tr>
-          <td>Usage of your data</td>
-          <td>Fine-tuning</td>
-        </tr>
-        <tr>
-          <td>Helping validate fairness in AI models</td>
-          <td>Making predictions on the network</td>
-        </tr>
-      </table>
-    </div>
+	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t js-fullheight">
 
-  </div>
+						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
+							<h1> FAI<a>3</a></h1>
+							<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+								<rect width="100" height="100" fill="url(#pattern0_809_470)"/>
+								<defs>
+								<pattern id="pattern0_809_470" patternContentUnits="objectBoundingBox" width="1" height="1">
+								<use xlink:href="#image0_809_470" transform="matrix(0.005 0 0 0.00508588 0 -0.00858779)"/>
+								</pattern>
+								<image id="image0_809_470" width="200" height="200" xlink:href="data:image/png;base64,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"/>
+								</defs>
+							</svg>
+							<h3>Fair AI for a better future.</h3>
+							<p> We are dedicated to building AI models that are both trustworthy and equitable. Our team of experts specializes in AI evaluation, web3 validation, and equitable AI design. We believe that AI should work for everyone, and we are committed to making that a reality. Join us on our mission to build a better future powered by AI.
+							</p>
+							<p><a class="btn btn-primary btn-lg btn-demo" href="#"></i> View Demo</a> <a class="btn btn-primary btn-lg btn-learn">White Paper</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
 
-  <footer>
-    <p>&copy; 2024 FAI3. All rights reserved.</p>
-  </footer>
-</body>
+	<div id="fh5co-features">
+		<div class="container">
+			<div class="services-padding">
+				<div class="row">
+					<div class="col-md-4 animate-box">
+						<div class="feature-left">
+							<span class="icon">
+								<i class="icon-search"></i>
+							</span>
+							<div class="feature-copy">
+								<h3>AI certification on chain</h3>
+								<p>Once you evaluate your model, the scores stay on chain, generating a certification of your model evaluation.</p>
+								<!--p><a href="#">Learn More <i class="icon-arrow-right22"></i></a></p-->
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4 animate-box">
+						<div class="feature-left">
+							<span class="icon">
+								<i class="icon-genius"></i>
+							</span>
+							<div class="feature-copy">
+								<h3>Improvement report</h3>
+								<p>Based on the desagregated score obtain, you can (and should) improve your model on the weak dimensions. Don't know where to start? No worries. Our network of datascientist can help you out. </p>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-md-4 animate-box">
+						<div class="feature-left">
+							<span class="icon">
+								<i class="icon-chat"></i>
+							</span>
+							<div class="feature-copy">
+								<h3>Leaderboard</h3>
+								<p>Build your reputation on chain and let everyone know about your model performance!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fh5co-wireframe">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>We need public, transparent and trustworthy  AI certification</h2>
+				</div>
+			</div>
+				<!--div class="user-frame"-->
+			<center>
+
+			<img class="fh5co-team" width="40%" src="images/AmazonSexist.png"/>
+			<img class="fh5co-team"  width="40%" src="images/AppleSexist.png"  />
+				<img  class="fh5co-team"  width="50%" src="images/natureRacism.png" />
+			</center>	
+		
+		</div>
+	</div>
+
+	<div id="fh5co-slider">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 animate-box">
+					<div class="heading">
+						<h2>How it works</h2>
+						<p>1- Submit your model</p>
+						<p>2- Obtain score report</p>
+						<p>3- Check the leaderboard</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-md-push-1 animate-box">
+					<aside id="fh5co-hero">
+					<div class="flexslider">
+						<ul class="slides">
+					   	<li style="background-image: url(images/submitCode.png);">
+					   		<div class="overlay-gradient"></div>
+					   		<div class="container-fluid">
+					   			<div class="row">
+						   			<div class="col-md-12 col-md-offset-0 col-md-pull-10 slider-text slider-text-bg">
+						   				<div class="slider-text-inner">
+						   					<div class="desc">
+													<h2>Submit your model</h2>
+													<p>Upload your code, test set and weights</p>
+						   					</div>
+						   				</div>
+						   			</div>
+						   		</div>
+					   		</div>
+					   	</li>
+					   	<li style="background-image: url(images/report.png);">
+					   		<div class="overlay-gradient"></div>
+					   		<div class="container-fluid">
+					   			<div class="row">
+						   			<div class="col-md-12 col-md-offset-0 col-md-pull-10 slider-text slider-text-bg">
+						   				<div class="slider-text-inner">
+						   					<div class="desc">
+													<h2>Get report</h2>
+													<p>Get report with the scores calculated</p>
+						   					</div>
+						   				</div>
+						   			</div>
+						   		</div>
+					   		</div>
+					   	</li>
+					   	<li style="background-image: url(images/leaderboard.png);">
+					   		<div class="overlay-gradient"></div>
+					   		<div class="container-fluid">
+					   			<div class="row">
+						   			<div class="col-md-12 col-md-offset-0 col-md-pull-10 slider-text slider-text-bg">
+						   				<div class="slider-text-inner">
+											<div class="desc">
+												<h2>See leaderboard</h2>
+												<p>See your score in the leaderboard and how you compare to others</p>
+										   </div>
+						   				</div>
+						   			</div>
+						   		</div>
+					   		</div>
+					   	</li>		   	
+					  	</ul>
+				  	</div>
+				</aside>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+
+	<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-4 fh5co-widget">
+					<h4>Contact</h4>
+					<p>viviana@siless.me</p>
+				</div>
+				
+				<div class="col-md-4 col-md-push-1 fh5co-widget">
+					<h4>Network</h4>
+					<ul class="fh5co-footer-links">
+						<li>Demo </li>
+						<li><a href="fai3.network">fai3.network</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4 col-md-push-1 fh5co-widget">
+					<h4>Social Media</h4>
+					<ul class="fh5co-footer-links">
+						<ul class="fh5co-social-icons">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-linkedin"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+						</ul>
+					</ul>
+				</div>
+
+			</div>
+
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">&copy; 2024 All Rights Reserved.</small> 
+						<small class="block">Designed by FreeHTML5.co </small>
+					</p>
+
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</body>
 </html>
+

@@ -71,8 +71,8 @@
 						</div>
 						<div class="col-xs-10 text-right menu-1">
 							<ul>
-								<li class="active"><a href="index.html">Home</a></li>
-								<li><a href="whitepaper.html">White Paper</a></li>
+								<li ><a href="index.html">Home</a></li>
+								<li class="active"><a href="whitepaper.html">White Paper</a></li>
 								<li><a href="about.html">About Us</a></li>
 							</ul>
 						</div>
@@ -88,145 +88,83 @@
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					
 					
-<h1>White Paper on AI Certification in Web Applications: Fairness, Accuracy, and Toxicity</h1>
+<h1>AI Certification on chain</h1>
+<div class="text-left">
+<p>
+	Today there are no standards required for an AI algorithm to be place in production, and moreover, there is no transparecy for users and clients. Thus, we can become active targest of discrimination without knowing. This happens in finance, healthcare, and more. 
+	We standarize existing metrics in the field of AI for evaluating fairness, accuracy,  toxicity, and data quality in order to increase confidence and reliability in AI models. 
+	Our goal is to bring awarness, help model-makers to improve their fairness, and give a tool to users and clients to participate in model validation.
+</p>
 
-<h2>Introduction</h2>
-<p>This white paper aims to provide a comprehensive technical analysis of an AI certification project for web applications, focusing on critical dimensions such as fairness, accuracy, and toxicity. It will also delve into data analysis aspects, including quality, variety, organization, age, data privacy, and the authenticity of data. Additionally, it will cover code verification and replication practices.</p>
-
-<h2>1. Fairness, Accuracy, and Toxicity</h2>
-
-<h3>Fairness</h3>
-
-<p><strong>Definition</strong>: Fairness in AI refers to the principle that AI systems should make decisions impartially and without bias. It encompasses ensuring that the outcomes are equitable across different demographic groups, such as gender, race, and age.</p>
-
-<p><strong>Technical Considerations</strong>:</p>
+<h3>How it works</h3>
 <ul>
-    <li><strong>Naive Fairness</strong>: Implementing fairness is not a straightforward task. Naive approaches, like simply balancing datasets, can overlook deeper issues such as systemic biases and intersectionality.</li>
-    <li><strong>Intentional Discrimination</strong>: The system must be capable of identifying and mitigating intentional discriminatory practices. For instance, if there is an attempt to design an AI that deliberately discriminates against women, the certification process should flag and address this bias.</li>
-    <li><strong>Fairness Metrics</strong>: Common metrics include demographic parity, equalized odds, and disparate impact ratio. These metrics should be computed and reported for various subgroups.</li>
+    <li><strong>1- Submit your model</strong>: Submit a model's code, weights, test data and targets. We use zero knowledge to create a proof of the model and it's execution with the output data. We register the verifier for the model on chain. Then, with input, predicted and target values we calculate the scores on chain.</li>
+    <li><strong>2- Obtain a report</strong>: A report for the model is created on chain. You will see our analysis for metrics, data quality, data distribution and suggested improvement dimensions and techniques.</li>
+    <li><strong>3- Be part of the leaderboard</strong>: Models will be rated on a leaderboard, allowing anybody to publicly see their evaluation reports. This helps promote your model, your code, or you as a scientist.</li>
 </ul>
 
-<h3>Accuracy</h3>
 
-<p><strong>Definition</strong>: Accuracy measures the correctness of the AI system's predictions or decisions. It is typically evaluated using metrics such as precision, recall, F1 score, and overall accuracy.</p>
+<h3>Metrics</h3>
 
-<p><strong>Technical Considerations</strong>:</p>
-<ul>
-    <li><strong>Model Performance</strong>: Regular evaluation against benchmark datasets to ensure the model maintains high performance.</li>
-    <li><strong>Bias-Variance Tradeoff</strong>: Balancing bias and variance to achieve optimal accuracy without overfitting or underfitting.</li>
-    <li><strong>Cross-Validation</strong>: Using techniques like k-fold cross-validation to assess the robustness of the model.</li>
-</ul>
 
-<h3>Toxicity</h3>
+<strong>Fairness</strong>:  AI systems should make decisions impartially and without bias. It encompasses ensuring that the outcomes are equitable across different demographic groups, such as gender, race, and age.
+Naive approaches, like simply balancing datasets, can overlook deeper issues such as systemic biases and intersectionality. Common metrics include demographic parity, equal opportunity, equalized odds, and disparate impact ratio. These metrics should be computed and reported for various subgroups.
 
-<p><strong>Definition</strong>: Toxicity refers to harmful, abusive, or inappropriate content generated by AI systems, which can degrade user experience and lead to negative societal impacts.</p>
+<br>
+<br>
+<strong>Accuracy</strong>: A measure of correctness for the predictions. 
+It is typically evaluated using metrics such as precision, recall, F1 score, and overall accuracy.
 
-<p><strong>Technical Considerations</strong>:</p>
-<ul>
-    <li><strong>Content Moderation</strong>: Implementing filters and moderation systems to detect and mitigate toxic content.</li>
-    <li><strong>Sentiment Analysis</strong>: Utilizing NLP techniques to evaluate the sentiment and flag potentially harmful language.</li>
-    <li><strong>User Feedback</strong>: Incorporating user feedback mechanisms to continuously improve the system’s ability to identify and mitigate toxicity.</li>
-</ul>
+<br>
+<br>
+<strong>Toxicity</strong>: Toxicity refers to harmful, abusive, or inappropriate content generated by AI systems, which can degrade user experience and lead to negative societal impacts. This metric focus on generative AI.
+	We will utilize NLP techniques to evaluate the sentiment and flag potentially harmful language.
 
-<h2>2. Data Analysis</h2>
+<br> 
+<br>
+<strong>Data Quality</strong>: Data quality refers to the accuracy, completeness, and reliability of the data used to train and evaluate AI models.
+	We provide report of missing value, distribution of variables, outliers, inconsistencies in data, variability.
 
-<h3>Quality</h3>
+<br>
+<br>
+<strong>Age, Contextual Relevance</strong>: The relevance of data over time, acknowledging that some data may become outdated and less useful. Ensuring the data is relevant to the application domain. Recognizing the historical context, such as past voting restrictions for women, which may affect data interpretation.
 
-<p><strong>Definition</strong>: Data quality refers to the accuracy, completeness, and reliability of the data used to train and evaluate AI models.</p>
+<br>
+<br>
+<strong>Data Updates</strong>: Certain algorithms will need updating with new data to keep being reliable, and thus, in certain cases time of last verification will be crucial, and the metrics will need to be updated with new datasets updating the model weights.Definitions for next susggested update and reliability of the AI given date expiration. 
 
-<p><strong>Technical Considerations</strong>:</p>
-<ul>
-    <li><strong>Data Cleaning</strong>: Implementing preprocessing steps to handle missing values, outliers, and inconsistencies.</li>
-    <li><strong>Validation</strong>: Regular audits to ensure data integrity and correctness.</li>
-</ul>
+<br>
+<br>
 
-<h3>Variety</h3>
+<strong>Data Privacy and copywright compliance</strong>: Ensuring the privacy and confidentiality of data used. Source transparency, copyright compliance and anonymization
+<br>
+<br>
+<strong>Fakeness</strong>: The authenticity and reliability of the data used.
+Source verification to ensuring data is sourced from credible and verified sources.and implementation of algorithms to datect fakeness and manipulated data.
 
-<p><strong>Definition</strong>: Variety refers to the different types of data used, such as structured, unstructured, and semi-structured data.</p>
+<br>
+<br>
 
-<p><strong>Technical Considerations</strong>:</p>
-<ul>
-    <li><strong>Multimodal Data</strong>: Combining text, images, audio, and other forms of data to enrich the training set.</li>
-    <li><strong>Contextual Relevance</strong>: Ensuring the data is relevant to the application domain.</li>
-</ul>
+<h3>Code Verification</h3>
 
-<h3>Organization</h3>
+Ensuring good practices of the code. We source code audit code for good practices in AI that can lead to overfitting, bias or missleading results. Such avoiding data augmentation on test set,  and splitting correctly datasets.
+<br>
+<br>
 
-<p><strong>Tags</strong>: Proper tagging and metadata management to enhance data usability and searchability.</p>
+<h3>Replication</h3>
 
-<h3>Age</h3>
+The ability to reproduce the results in AI is crucial for evaluating models. For that reason our solution allow multiple submissions for verification of an already submitted model. Our limitation is that to ensure the model is the same, the source code must be exactly the same. 
 
-<p><strong>Definition</strong>: The relevance of data over time, acknowledging that some data may become outdated and less useful.</p>
+<br>
+<br>
 
-<p><strong>Technical Considerations</strong>:</p>
-<ul>
-    <li><strong>Historical Context</strong>: Recognizing the historical context, such as past voting restrictions for women, which may affect data interpretation.</li>
-    <li><strong>Data Freshness</strong>: Regular updates to ensure the data remains current and relevant.</li>
-</ul>
-
-<h3>Data Privacy</h3>
-
-<p><strong>Definition</strong>: Ensuring the privacy and confidentiality of data used in AI systems.</p>
-
-<p><strong>Technical Considerations</strong>:</p>
-<ul>
-    <li><strong>Source Transparency</strong>: Clear documentation on data sources and acquisition methods.</li>
-    <li><strong>Copyright Compliance</strong>: Ensuring all data used is legally obtained and complies with copyright laws.</li>
-    <li><strong>Anonymization</strong>: Implementing techniques to anonymize personal data to protect user privacy.</li>
-</ul>
-
-<h3>Fakeness</h3>
-
-<p><strong>Definition</strong>: The authenticity and reliability of the data used.</p>
-
-<p><strong>Technical Considerations</strong>:</p>
-<ul>
-    <li><strong>Source Verification</strong>: Ensuring data is sourced from credible and verified sources.</li>
-    <li><strong>Fake Data Detection</strong>: Implementing algorithms to detect and filter out fake or manipulated data.</li>
-</ul>
-
-<h3>Data Updates</h3>
-
-<p><strong>Definition</strong>: The frequency and methodology of updating the data.</p>
-
-<p><strong>Technical Considerations</strong>:</p>
-<ul>
-    <li><strong>Update Schedules</strong>: Establishing regular intervals for data updates.</li>
-    <li><strong>Dynamic Updating</strong>: Implementing systems for real-time or near-real-time data updates where applicable.</li>
-</ul>
-
-<h2>3. Code Verification</h2>
-
-<p><strong>Definition</strong>: Ensuring the integrity and originality of the code used in AI systems.</p>
-
-<p><strong>Technical Considerations</strong>:</p>
-<ul>
-    <li><strong>Source Code Audit</strong>: Regular audits to verify whether the code is self-written or sourced from external libraries.</li>
-    <li><strong>Licensing Compliance</strong>: Ensuring compliance with open-source licenses and other intellectual property considerations.</li>
-    <li><strong>Code Reviews</strong>: Implementing peer reviews and automated code analysis tools to maintain code quality.</li>
-</ul>
-
-<h2>4. Replication</h2>
-
-<p><strong>Definition</strong>: The ability to reproduce the results of the AI system independently.</p>
-
-<p><strong>Technical Considerations</strong>:</p>
-<ul>
-    <li><strong>Reproducibility</strong>: Providing comprehensive documentation and access to datasets and code to facilitate replication.</li>
-    <li><strong>Open Access</strong>: Where possible, open-sourcing the code and data to allow independent verification and community contributions.</li>
-    <li><strong>Benchmarking</strong>: Establishing benchmarks and standard test suites for consistent evaluation across different implementations.</li>
-</ul>
-
-<h2>Conclusion</h2>
-
-<p>This white paper outlines the technical considerations necessary for certifying AI in web applications, focusing on fairness, accuracy, and toxicity. By addressing these dimensions along with rigorous data analysis, code verification, and replication practices, we can ensure the development of robust, ethical, and reliable AI systems.</p>
 
 					
 				</div>
 			</div>
 		</div>
 	</div>
-
+</div>
 	<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">
 			<div class="row row-pb-md">

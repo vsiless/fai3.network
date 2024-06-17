@@ -3,11 +3,32 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Air &mdash; Free Website Template, Free HTML5 Template by freehtml5.co</title>
+	<title>FAI3 &mdash; FAIR AI for a better future</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
 	<meta name="author" content="freehtml5.co" />
+	<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<title>Fairness Metrics Equations</title>
+	<style>
+        .metric-equation {
+            text-align: left;
+            margin-left: 20px;
+        }
+        .metric-explanation {
+            margin-left: 20px;
+        }
+        .example {
+            margin-left: 20px;
+            font-style: italic;
+        }
+        h2 {
+            font-size: 2em;
+        }
+        h3 {
+            font-size: 1.5em;
+        }
+    </style>
 
 	<!-- 
 	//////////////////////////////////////////////////////
@@ -61,7 +82,6 @@
 		
 	<div class="fh5co-loader"></div>
 	
-		
 	<div id="page">
 		<nav class="fh5co-nav" role="navigation">
 			<div class="top-menu">
@@ -72,16 +92,10 @@
 						</div>
 						<div class="col-xs-10 text-right menu-1">
 							<ul>
-								<li class="active"><a href="index.html">Home</a></li>
-								<li class="has-dropdown active">
-									<a href="whitepaper.html">White Paper</a>
-									<ul class="dropdown">
-										<li><a href="whitepaper.html">General protocol</a></li>
-										<li><a href="fairness_metrics.html">Fairness Metrics</a></li>
-										
-									</ul>
-								</li>
+								<li ><a href="index.html">Home</a></li>
+								<li class="active"><a href="whitepaper.html">White Paper</a></li>
 								<li><a href="about.html">About Us</a></li>
+								<li><a href="fairness_metrics.html">Metrics</a></li>
 							</ul>
 						</div>
 					</div>
@@ -90,105 +104,79 @@
 			</div>
 		</nav>
 
-	<div>
+	<div id="fh5co-portfolio">
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>About Us</h2>
-					<p>We are a team of researchers in AI, professors and web3 and web2 developers commited to bringing fairness and transparency into AI models worldwide used.</p>
+					
+
+					<body>
+						<h2>Fairness Metrics Equations and Explanations</h2>
+					
+						<p>These fairness metrics are used for classification models to ensure equitable outcomes across different groups. Future metrics will be added based on DAO Governance voting to adapt and expand our fairness assessments.</p>
+					
+						<h3>Variable Explanations</h3>
+						<p class="metric-explanation"><strong>A</strong>: Protected attribute (e.g., race, gender) where \( A = 0 \) represents the unprivileged group and \( A = 1 \) represents the privileged group.</p>
+						<p class="metric-explanation"><strong>Y</strong>: Actual outcome (ground truth), where \( Y = 1 \) indicates a positive outcome and \( Y = 0 \) indicates a negative outcome.</p>
+						<p class="metric-explanation"><strong>\(\hat{Y}\)</strong>: Predicted outcome by the classification model, where \( \hat{Y} = 1 \) indicates a positive prediction and \( \hat{Y} = 0 \) indicates a negative prediction.</p>
+					
+						<h3>Statistical Parity Difference</h3>
+						<p class="metric-explanation">The statistical parity difference measures the difference in the positive outcome rates between the unprivileged group and the privileged group.</p>
+						<p class="metric-equation">
+							\[
+							\text{SPD} = P(\hat{Y} = 1 \mid A = 0) - P(\hat{Y} = 1 \mid A = 1)
+							\]
+						</p>
+						<p class="example">Example:<br>
+							- Unfair Outcome: SPD significantly different from 0 (e.g., -0.4 or 0.4)<br>
+							- Fair Outcome: SPD close to 0 (e.g., -0.1 to 0.1)
+						</p>
+					
+						<h3>Disparate Impact</h3>
+						<p class="metric-explanation">Disparate impact compares the ratio of the positive outcome rates between the unprivileged group and the privileged group.</p>
+						<p class="metric-equation">
+							\[
+							\text{DI} = \frac{P(\hat{Y} = 1 \mid A = 0)}{P(\hat{Y} = 1 \mid A = 1)}
+							\]
+						</p>
+						<p class="example">Example:<br>
+							- Unfair Outcome: DI significantly different from 1 (e.g., less than 0.8 or greater than 1.25)<br>
+							- Fair Outcome: DI close to 1 (e.g., 0.8 to 1.25)
+						</p>
+					
+						<h3>Average Odds Difference</h3>
+						<p class="metric-explanation">The average odds difference measures the difference in false positive rates and true positive rates between the unprivileged group and the privileged group.</p>
+						<p class="metric-equation">
+							\[
+							\text{AOD} = \frac{1}{2} \left[ \left( P(\hat{Y} = 1 \mid A = 0, Y = 0) - P(\hat{Y} = 1 \mid A = 1, Y = 0) \right) + \left( P(\hat{Y} = 1 \mid A = 0, Y = 1) - P(\hat{Y} = 1 \mid A = 1, Y = 1) \right) \right]
+							\]
+						</p>
+						<p class="example">Example:<br>
+							- Unfair Outcome: AOD significantly different from 0 (e.g., -0.2 or 0.2)<br>
+							- Fair Outcome: AOD close to 0 (e.g., -0.1 to 0.1)
+						</p>
+					
+						<h3>Equal Opportunity Difference</h3>
+						<p class="metric-explanation">The equal opportunity difference measures the difference in true positive rates between the unprivileged group and the privileged group.</p>
+						<p class="metric-equation">
+							\[
+							\text{EOD} = P(\hat{Y} = 1 \mid A = 0, Y = 1) - P(\hat{Y} = 1 \mid A = 1, Y = 1)
+							\]
+						</p>
+						<p class="example">Example:<br>
+							- Unfair Outcome: EOD significantly different from 0 (e.g., -0.2 or 0.2)<br>
+							- Fair Outcome: EOD close to 0 (e.g., -0.1 to 0.1)
+						</p>
+					
+					</body>
+
+
+					
 				</div>
 			</div>
 		</div>
 	</div>
-
-	
-	<div id="fh5co-content-section">
-		<div class="container">
-			<div class="row row-bottom-padded-md">
-				<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-					<h3>Our Team</h3>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<div class="row">
-				<center>
-		
-				<div class="col-md-6">
-					<div class="fh5co-team text-center animate-box">
-						<figure>
-							<img src="images/vivs.png" alt="user">
-						</figure>
-						<p>Viviana Siless, Ph.D. <br> <span class="text-mute"></span></p>
-						<blockquote>
-							<p>M.Sc. PhD. Post. Doc. in Computer Science | UBA, Paris XI, Harvard |
-								Assistant Professor & AI researcher at University Torcuato Di Tella 
-								</p>
-						</blockquote>
-						
-
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="fh5co-team text-center animate-box">
-						<figure>
-							<img src="images/emma.jpeg" alt="user">
-						</figure>
-						<p>Emmanuel Iarussi, Ph.D. <br> <span class="text-mute"></span></p>
-						<blockquote>
-							<p>Eng. PhD. Post. Doc. in Computer Science | UNCPBA, INRIA,  ISTA Austria | AI researcher at CONICET | Assistant Professor at University Torcuato Di Tella </p>
-						</blockquote>
-						
-					</div>
-				</div>
-			</center>
-			</div>
-
-
-			<div class="row">
-				<div class="col-md-4">
-					<div class="fh5co-team text-center animate-box">
-						<figure>
-							<img src="images/santi.png" alt="user">
-						</figure>
-						<p>Santiago Nihany <br> <span class="text-mute">Web3 Developer</span></p>
-						<blockquote>
-							<p>Computer Engineering, Universidad Nacional de La Plata, Argentina.</p>
-						</blockquote>
-						
-
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="fh5co-team text-center animate-box">
-						<figure>
-							<img src="images/alan.jpeg" alt="user">
-						</figure>
-						<p>Alan Matys <br> <span class="text-mute">AI Scientist</span></p>
-						<blockquote>
-							<p>Ms. in Data Analytics, Universidad Torcuato Di Tella, Argentina</p>
-						</blockquote>
-						
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="fh5co-team text-center animate-box">
-						<figure>
-							<img src="images/luz.png" alt="user">
-						</figure>
-						<p>Luz Alba Posse <br> <span class="text-mute">Design UX/UI</span></p>
-						<blockquote>
-							<p>BS. Digital Technologies Universidad Torcuato Di Tella, Argentina</p>
-						</blockquote>
-						
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-
-
+</div>
 	<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">
 			<div class="row row-pb-md">
@@ -230,8 +218,6 @@
 
 		</div>
 	</footer>
-	</div>
-
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
 	</div>

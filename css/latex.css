@@ -1,0 +1,17 @@
+.metric-equation {
+    text-align: left;
+    margin-left: 20px;
+}
+.metric-explanation {
+    margin-left: 20px;
+}
+.example {
+    margin-left: 20px;
+    font-style: italic;
+}
+h2 {
+    font-size: 2em;
+}
+h3 {
+    font-size: 1.5em;
+}

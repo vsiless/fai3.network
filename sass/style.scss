@@ -586,6 +586,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-hero {
 	height: 500px !important;
 	background: url(../images/loader.gif) no-repeat center center;
+	color: #FFFFFF;
 	.btn {
 		font-size: 24px;
 		&.btn-primary {
@@ -596,7 +597,7 @@ h1, h2, h3, h4, h5, h6, figure {
 		border: none;
 		z-index: 1;
 		margin-bottom: 0;
-
+		
 		.slides {
 			position: relative;
 			// overflow: hidden;
@@ -653,7 +654,9 @@ h1, h2, h3, h4, h5, h6, figure {
 
 			}
 		}
-		.slider-text,
+		.slider-text {
+			color: #FFFFFF;
+		}
 		.slider-text-bg {
 			display: table;
 			opacity: 0;
